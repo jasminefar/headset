@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1c1c2b;
+            margin: 0;
+        }
+
+        .stand {
+            position: relative;
+            width: 140px;
+            height: 250px;
+            background-color: #44445a;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .stand::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 10px;
+            background-color: #333347;
+            border-radius: 5px 5px 0 0;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .stand::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 10px;
+            background-color: #44445a;
+            border-radius: 5px;
+        }
+
+        .headset {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            width: 120px;
+            height: 120px;
+            background-color: #ffaad4;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 173, 216, 0.8), 0 0 25px rgba(255, 173, 216, 0.5);
+            z-index: 10;
+        }
+
+        .headset::before,
+        .headset::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 70px;
+            background-color: #ff88c2;
+            border-radius: 20px;
+            top: 25px;
+            box-shadow: 0 0 10px rgba(255, 136, 194, 0.6);
+        }
+
+        .headset::before {
+            left: -35px;
+        }
+
+        .headset::after {
+            right: -35px;
+        }
+
+        .headband {
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            width: 100px;
+            height: 40px;
+            background-color: #ff88c2;
+            border-radius: 40px 40px 0 0;
+            box-shadow: 0 0 10px rgba(255, 136, 194, 0.6);
+        }
+
+        .details {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff5588;
+            border-radius: 50%;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(255, 85, 136, 0.8), 0 0 20px rgba(255, 85, 136, 0.5);
+        }
+
+        .details::before,
+        .details::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #ff88c2;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(255, 136, 194, 0.6);
+        }
+
+        .details::before {
+            top: -10px;
+            left: -10px;
+        }
+
+        .details::after {
+            bottom: -10px;
+            right: -10px;
+        }
+
+        .microphone {
+            position: absolute;
+            bottom: 20px;
+            left: 80px;
+            width: 60px;
+            height: 10px;
+            background-color: #ff88c2;
+            border-radius: 5px;
+            transform: rotate(-20deg);
+            box-shadow: 0 0 10px rgba(255, 136, 194, 0.6);
+        }
+
+        .microphone::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffaad4;
+            border-radius: 50%;
+            right: -5px;
+            top: -2px;
+            box-shadow: 0 0 10px rgba(255, 173, 216, 0.8), 0 0 20px rgba(255, 173, 216, 0.5);
+        }
+
+        .table {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 20px;
+            background-color: #292941;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .table::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 10px;
+            background-color: #3a3a5c;
+            border-radius: 5px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="stand">
+        <div class="headset">
+            <div class="headband"></div>
+            <div class="details"></div>
+            <div class="microphone"></div>
+        </div>
+    </div>
+    <div class="table"></div>
+</body>
+</html>
